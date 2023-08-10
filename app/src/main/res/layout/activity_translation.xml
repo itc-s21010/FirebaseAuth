@@ -6,4 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".TranslationActivity">
 
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
