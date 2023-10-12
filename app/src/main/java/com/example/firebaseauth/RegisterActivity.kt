@@ -42,7 +42,7 @@ class RegisterActivity : AppCompatActivity() {
 
         progressDialog = ProgressDialog(this)
         progressDialog.setTitle("Logging")
-        progressDialog.setMessage("Silahkan tunggu...")
+        progressDialog.setMessage("Please wait...")
 
         btnLogin.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
@@ -53,10 +53,10 @@ class RegisterActivity : AppCompatActivity() {
                 if (editPassword.text.toString() == editPasswordConf.text.toString()) {
                     processRegister()
                 }else{
-                    Toast.makeText(this, "Konfirmasi Kata sandi harus sama!", LENGTH_SHORT).show()
+                    Toast.makeText(this, "Confirm Passwords must be the same!", LENGTH_SHORT).show()
                 }
             }else{
-                Toast.makeText(this, "Silahkan isi dulu semua data", LENGTH_SHORT).show()
+                Toast.makeText(this, "Please fill in all the data first", LENGTH_SHORT).show()
             }
         }
     }

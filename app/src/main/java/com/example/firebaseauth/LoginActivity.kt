@@ -37,13 +37,13 @@ class LoginActivity : AppCompatActivity() {
 
         progressDialog = ProgressDialog(this)
         progressDialog.setTitle("Logging")
-        progressDialog.setMessage("Silahkan tunggu...")
+        progressDialog.setMessage("Please wait...")
 
         btnLogin.setOnClickListener {
             if (editEmail.text.isNotEmpty() && editPassword.text.isNotEmpty()){
                 prosesLogin()
             }else{
-                Toast.makeText(this, "Silahkan isi email dan password terlebin dahulu", LENGTH_SHORT).show()
+                Toast.makeText(this, "Please fill in the email and password first", LENGTH_SHORT).show()
             }
         }
         btnRegister.setOnClickListener {
