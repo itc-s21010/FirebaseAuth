@@ -1,5 +1,4 @@
 package com.example.firebaseauth
-
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -26,7 +25,7 @@ class ResetPassword : AppCompatActivity() {
             val sPassword = etPassword.text.toString()
             auth.sendPasswordResetEmail(sPassword)
                 .addOnSuccessListener {
-                    Toast.makeText(this, "Please check your Emael", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Please check your Email", Toast.LENGTH_SHORT).show()
                 }
                 .addOnFailureListener {
                     Toast.makeText(this, it.toString(), Toast.LENGTH_SHORT).show()

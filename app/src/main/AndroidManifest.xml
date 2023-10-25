@@ -13,13 +13,23 @@
         android:theme="@style/Theme.FirebaseAuth"
         tools:targetApi="31">
         <activity
-            android:name=".ResetPassword"
-            android:exported="false"
-            android:label="@string/title_activity_reset_password"
-            android:theme="@style/Theme.FirebaseAuth" />
+            android:name=".WeatherActivity"
+            android:exported="false" />
         <activity
             android:name=".TranslationActivity"
-            android:exported="false" />
+            android:exported="false">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.ichibanya.co.jp"
+                    android:pathPattern="/ichibanya"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".RegisterActivity"
             android:exported="false" />

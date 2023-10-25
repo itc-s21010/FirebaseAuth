@@ -35,10 +35,15 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }
+
+        val btn_translate = findViewById<Button>(R.id.btn_translate)
+        btn_translate.setOnClickListener {
+            startActivity(Intent(this, TranslationActivity::class.java))
+        }
+
         val btn_passreset = findViewById<Button>(R.id.btn_passreset)
         btn_passreset.setOnClickListener {
-            val intent = Intent(this, ResetPassword::class.java)
-            startActivity(intent)
+            startActivity(Intent(this,ResetPassword::class.java ))
         }
     }
 }

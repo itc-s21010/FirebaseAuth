@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">FirebaseAuth</string>
+    <string name="text"><a href="https://www.mofa.go.jp/mofaj/link/emblist/index.html">確認はこちら</a></string>
     <string-array name="spinnerItems">
         <item>翻訳</item>
         <item>マップ</item>
