@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TranslationActivity">
+    tools:context=".TranslateActivity">
 
     <ScrollView
         android:layout_above="@+id/optionsLl"
@@ -53,6 +53,11 @@
             android:text="English"
             android:layout_weight="1"
             app:cornerRadius="10dp"/>
+
+        <ImageView
+            android:src="@drawable/baseline_arrow_forward_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/targetLanguageChooseBtn"

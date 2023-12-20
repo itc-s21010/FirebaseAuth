@@ -5,31 +5,30 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 
-class LinkActivity : AppCompatActivity() {
+class EmergencyActivity : AppCompatActivity() {
     lateinit var button: Button
-    lateinit var button2: Button
+    lateinit var imageView: ImageView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_link)
+        setContentView(R.layout.activity_emergency)
 
         button = findViewById(R.id.button)
-        button = findViewById(R.id.button2)
+        imageView = findViewById(R.id.imageView)
 
         button.setOnClickListener {
-            openUrl("https://chat.google.com/dm/m8MplEAAAAE/kLxdCDDvkAw/kLxdCDDvkAw?cls=10")
+            openUrl("https://www.kifjp.org/disaster/news_eng/497")
         }
-
-        button2.setOnClickListener {
-            openUrl("")
+        imageView.setOnClickListener {
+            openUrl("http://54.199.142.48/wordpress/")
         }
-
     }
 
     private fun openUrl(link:String) {
         val uri = Uri.parse(link)
         val intent = Intent(Intent.ACTION_VIEW, uri)
         startActivity(intent)
-
     }
 }

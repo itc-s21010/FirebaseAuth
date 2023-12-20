@@ -10,7 +10,6 @@ import android.widget.PopupMenu
 import android.widget.TextView
 import android.widget.Toast
 import com.google.android.material.button.MaterialButton
-import com.google.android.material.transition.platform.MaterialContainerTransform.ProgressThresholds
 import com.google.mlkit.common.model.DownloadConditions
 import com.google.mlkit.nl.translate.TranslateLanguage
 import com.google.mlkit.nl.translate.Translation
@@ -18,7 +17,7 @@ import com.google.mlkit.nl.translate.Translator
 import com.google.mlkit.nl.translate.TranslatorOptions
 import java.util.Locale
 
-class TranslationActivity : AppCompatActivity() {
+class TranslateActivity : AppCompatActivity() {
     private lateinit var sourceLanguageEt: EditText
     private lateinit var targetLanguageTv: TextView
     private lateinit var sourceLanguageChooseBtn: MaterialButton
@@ -33,16 +32,18 @@ class TranslationActivity : AppCompatActivity() {
 
     private var sourceLanguageCode = "en"
     private var sourceLanguageTitle = "English"
-    private var targetLanguageCode = "ur"
+    private var targetLanguageCode = "japan"
     private var targetLanguageTitle = "Urdu"
 
     private lateinit var translatorOptions: TranslatorOptions
+
     private lateinit var translator: Translator
+
     private lateinit var progressDialog: ProgressDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_translation)
+        setContentView(R.layout.activity_translate)
 
         sourceLanguageEt = findViewById(R.id.sourceLanguageEt)
         targetLanguageTv = findViewById(R.id.targetLanguageTv)

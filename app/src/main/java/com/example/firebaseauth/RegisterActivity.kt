@@ -45,7 +45,7 @@ class RegisterActivity : AppCompatActivity() {
         progressDialog.setMessage("Please wait...")
 
         btnLogin.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
         btnRegister.setOnClickListener {
